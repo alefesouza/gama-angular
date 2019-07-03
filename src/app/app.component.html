@@ -1,15 +1,10 @@
-<b>Hello World</b>
-
-<i>{{ title }}</i>
-
 <app-contador></app-contador>
 
-<div *ngIf="title == 'Souza'">Sobrenome é: {{ title }}</div>
+<b>App: {{contador}}</b>
 
-<button (click)="novoItem()" class="btn btn-primary">Novo número</button>
+<app-contador-botoes></app-contador-botoes>
 
-<ul>
-  <li *ngFor="let item of items">
-    <app-todo-item [data]="item"></app-todo-item>
-  </li>
-</ul>
+<a routerLink="/">Home</a> |
+<a routerLink="/todos">Todos</a>
+
+<router-outlet></router-outlet>
