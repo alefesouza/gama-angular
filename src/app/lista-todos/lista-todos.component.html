@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let item of todos">
+  <li *ngFor="let item of todos$ | async">
     <app-todo-item [data]="item"></app-todo-item>
   </li>
 </ul>
