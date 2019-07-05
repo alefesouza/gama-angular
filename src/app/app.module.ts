@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: 'todos', loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule) },
   { path: 'cep', loadChildren: () => import('./cep/cep.module').then(m => m.CepModule) },
 ];

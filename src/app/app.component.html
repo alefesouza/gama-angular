@@ -3,10 +3,15 @@
 <!-- <b>App: {{contador}}</b>
 
 <app-contador-botoes></app-contador-botoes> -->
+<div *ngIf="email !== ''">
+  Olá, {{ email }} <button (click)="logout()">Sair</button>
+</div>
 
 <a routerLink="/">Home</a> |
 <a routerLink="/todos">Todos</a> |
 <a routerLink="/todos/add">Adicionar todo</a> |
-<a routerLink="/cep">CEP</a>
+<a routerLink="/cep">CEP</a> |
+<a routerLink="/auth/login">Login</a> |
+<a routerLink="/auth/register">Cadastro</a>
 
 <router-outlet></router-outlet>
