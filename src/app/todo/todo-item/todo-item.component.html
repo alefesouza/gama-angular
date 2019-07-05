@@ -4,4 +4,6 @@
   <b>Descrição: </b> {{ data.description }}<br>
   <b>Finalizado: {{ data.finished | bool }}</b><br>
   <b>Data: {{ data.date | date: 'dd/MM/yyyy' }}</b><br>
+
+  <button (click)="editar()">Editar</button>
 </div>

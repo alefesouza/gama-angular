@@ -12,7 +12,7 @@ export class AuthService {
   constructor(private httpClient: HttpClient) { }
 
   login(email, password) {
-// tslint:disable-next-line: max-line-length
+    // tslint:disable-next-line: max-line-length
     return this.httpClient.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyC4JlSXloABo8nCHsjECLMkBmXLWJTIgoc', {
       email,
       password,

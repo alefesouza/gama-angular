@@ -9,11 +9,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  { path: 'todos', loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule) },
+  { path: 'todos', canActivate: [AuthGuard], loadChildren: () => import('./todo/todo.module').then(m => m.TodoModule) },
   { path: 'cep', loadChildren: () => import('./cep/cep.module').then(m => m.CepModule) },
 ];
 
