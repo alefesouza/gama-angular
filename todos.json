@@ -2,46 +2,18 @@
   "todos": [
     {
       "id": 1,
-      "title": "Aula 1",
-      "description": "Aprender sobre componentes.",
+      "title": "Ionic 4: O que há de novo",
+      "description": "teste",
       "finished": true,
-      "date": "2018-10-31"
+      "date": "2019-07-11",
+      "userId": "jiKVLxs4wjgon2qUg0VaYnHzwzQ2"
     },
     {
       "id": 2,
-      "title": "Aula 2",
-      "description": "Aprender sobre requisições e rotas.",
-      "finished": false,
-      "date": "2018-11-01"
-    },
-    {
-      "id": 3,
-      "title": "Aula 3",
-      "description": "Aprender sobre formulários.",
-      "finished": false,
-      "date": "2018-11-02"
-    },
-    {
-      "id": 4,
-      "title": "Ionic 4: O que há de novo",
+      "title": "dfgf",
       "description": "Teste",
       "finished": true,
-      "date": "2019-07-09"
-    },
-    {
-      "id": 5,
-      "title": "teste",
-      "description": "teste",
-      "finished": true,
-      "date": "2019-07-04",
-      "user_id": "jiKVLxs4wjgon2qUg0VaYnHzwzQ2"
-    },
-    {
-      "id": 6,
-      "title": "Ionic 4: O que há de novo",
-      "description": "teste",
-      "finished": true,
-      "date": "2019-07-25",
+      "date": "2019-07-19",
       "userId": "jiKVLxs4wjgon2qUg0VaYnHzwzQ2"
     }
   ]

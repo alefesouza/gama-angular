@@ -10,14 +10,25 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./lista-todos.component.css']
 })
 export class ListaTodosComponent implements OnInit {
-  todos$: Observable<Todo[]>;
+  todos: Todo[] = [];
 
   constructor(private todoService: TodoService, private authService: AuthService) { }
 
   ngOnInit() {
     this.authService.currentUser.subscribe(user => {
-      this.todos$ = this.todoService.getTodos(user.id);
+      this.todoService.getTodos(user.id).subscribe((todos) => {
+        this.todos = todos;
+      });
     });
+  }
+
+  onDeleteItem(id) {
+    console.log(id);
+    this.todoService.deleteTodo(id)
+      .subscribe(v => {
+        alert('To-do apagado com sucesso');
+        this.todos = this.todos.filter(todo => todo.id !== id);
+      });
   }
 
 }

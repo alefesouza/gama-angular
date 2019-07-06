@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from 'src/typings/Todo';
 import { Router } from '@angular/router';
 
@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TodoItemComponent implements OnInit {
   @Input() data: Todo;
+  @Output() deleteEvent = new EventEmitter<number>();
 
   constructor(private router: Router) { }
 
@@ -17,6 +18,10 @@ export class TodoItemComponent implements OnInit {
 
   editar() {
     this.router.navigateByUrl('/todos/' + this.data.id);
+  }
+
+  apagar() {
+    this.deleteEvent.emit(this.data.id);
   }
 
 }

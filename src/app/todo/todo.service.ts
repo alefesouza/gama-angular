@@ -24,6 +24,10 @@ export class TodoService {
     return this.httpClient.get('http://localhost:3000/todos/' + id);
   }
 
+  deleteTodo(id) {
+    return this.httpClient.delete('http://localhost:3000/todos/' + id);
+  }
+
   updateTodo(id, todo) {
     return this.httpClient.put('http://localhost:3000/todos/' + id, todo);
   }
